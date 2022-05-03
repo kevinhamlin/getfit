@@ -8,6 +8,32 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
+import 'core-js/stable'
+import 'regenerator-runtime/runtime'
+
+import "../js/bootstrap_js_files"
+import * as bootstrap from 'bootstrap'
+import "../stylesheets/application"
+
+
+document.addEventListener("DOMContentLoaded", function(event) {
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+      return new bootstrap.Popover(popoverTriggerEl)
+    })
+  
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+    var modalTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="modal"]'))
+    var modalList = modalTriggerList.map(function (modalTriggerList) {
+      return new bootstrap.Tooltip(modalTriggerList)
+    })
+  });
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
