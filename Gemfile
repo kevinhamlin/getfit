@@ -60,3 +60,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "bullet", "~> 7.0", :group => :development
+
+gem "devise", "~> 4.8"
