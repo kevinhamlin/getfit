@@ -13,8 +13,8 @@ class UserTest < ActiveSupport::TestCase
   #   assert true
   # end
 
-  # test "should not save user without email" do
-  #   user = User.new
-  #   assert_not user.save
-  # end
+  test "should not save user without email" do
+    user = User.new
+    assert_not user.save
+  end
 end
