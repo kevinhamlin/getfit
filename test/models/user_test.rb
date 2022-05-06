@@ -17,4 +17,9 @@ class UserTest < ActiveSupport::TestCase
     user = User.new
     assert_not user.save
   end
+
+  test "should have default value of UTC for time_zone" do
+    @user.save
+    assert_equal "UTC", @user.reload.time_zone 
+  end
 end
