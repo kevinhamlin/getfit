@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/king601/devise-bootstrapped.git
+  revision: 464479797a3fc0ec11e9090b7dc62cc5db955f7d
+  branch: bootstrap5
+  specs:
+    devise-bootstrapped (0.2.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -234,6 +241,7 @@ DEPENDENCIES
   byebug
   capybara (>= 3.26)
   devise (~> 4.8)
+  devise-bootstrapped!
   jbuilder (~> 2.7)
   listen (~> 3.3)
   pg (~> 1.1)
