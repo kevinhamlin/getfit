@@ -9,3 +9,10 @@ confirmed_user:
  first_name: test first name
  last_name: test last name
  encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
+
+confirmed_user_with_time_zone:
+ email: user_two@example.com
+ first_name: test first name
+ last_name: test last name
+ time_zone: 'Eastern Time (US & Canada)'
+ encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
