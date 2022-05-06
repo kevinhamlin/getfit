@@ -15,9 +15,9 @@ class UsersTest < ApplicationSystemTestCase
     
     assert_difference("User.count") do
 
-      fill_in "Email", with: "unique@example.com"
+      fill_in "Email Address", with: "unique@example.com"
       fill_in "Password", with: "password"
-      fill_in "Password confirmation", with: "password"
+      fill_in "Confirm Password", with: "password"
 
       click_button "Sign up"
     end
@@ -26,10 +26,13 @@ class UsersTest < ApplicationSystemTestCase
   test "should sign in" do
     visit new_user_session_path
 
-    fill_in "Email", with: @user.email
+    fill_in "Email Address", with: @user.email
     fill_in "Password", with: "password"
     click_button "Log in"
 
     assert_selector "p", text: "Signed in successfully."
   end
+
+
+
 end
